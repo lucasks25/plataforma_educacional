@@ -1,0 +1,139 @@
+/* Estilos globais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0.5em 0;
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/* Hero */
+.hero {
+    background: url('https://via.placeholder.com/1200x600') center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.hero .btn:hover {
+    background: #0056b3;
+}
+
+/* Navegação */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+/* Carrossel */
+.carrossel {
+    display: flex;
+    overflow: auto;
+    gap: 10px;
+}
+
+.carrossel-item {
+    min-width: 80%;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carrossel-texto {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+}
+.footer {
+    background: #333;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+.container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .animated-border {
+    width: 400px;
+    height: 190px;
+    background: #de0d9c;
+    position: absolute;
+    animation: rotate 3s infinite ease-in-out;
+  }
+  .corner {
+    width: 198px;
+    height: 198px;
+    background: #000;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content {
+    width: 180px;
+    height: 180px;
+    background: #000;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #de0d9c;
+  }
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }

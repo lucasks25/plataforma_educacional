@@ -1,0 +1,525 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,
+html {
+    background-image: linear-gradient(to right, #010c19, #000a14);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    margin: 25px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    border-radius: 50px; 
+    margin-top: 10px;
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 30px;
+  }
+  .navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .btn-login {
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.3s;
+    margin-right: 30px;
+  }
+  .btn-login:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+
+  .learning-section {
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Espaçamento entre título e conteúdo */
+  }
+  
+  .content-wrapper {
+    display: flex;
+    justify-content: center; /* Espaça uniformemente os elementos */
+    align-items: flex-end; /* Alinha os textos ao topo das imagens */
+    gap: 20px; /* Espaçamento horizontal entre os grupos */
+  }
+  
+  .image-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px; /* Define um limite para o grupo */
+  }
+  
+  .image-feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Espaçamento menor entre a imagem e os textos */
+  }
+  
+  .text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os textos à esquerda */
+    gap: 5px; /* Espaçamento menor entre os textos */
+  }
+  
+  .feature-text {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaçamento menor entre o ícone e o texto */
+  }
+  
+  .check-icon {
+    font-size: 16px;
+    color: #FFD700; /* Cor dourada */
+  }
+  
+  .feature-text p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.2; /* Controla o espaçamento vertical */
+  }
+  
+  
+  
+  
+  
+  
+
+  
+/* COURSE TAGS */
+.catalog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    padding: 0 10px;
+}
+
+.category-title {
+    margin-bottom: 90px;
+    margin-top: 50px;
+}
+
+.category-title h2 {
+    font-size: 50px !important;
+    font-weight: bold;
+    color: white !important;
+    margin: 0;
+    text-align: center;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.category-item .icon {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.category-item.selected {
+    background-color: #1c1c1c;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+}
+
+.category-item:hover {
+    background-color: #2e2e2e;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #828282;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #ffffff;
+}
+
+/* CATALOG COURSE */
+.headingcourse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--container-color);
+    padding: 8px 14px;
+    border: 1px solid hsl(200, 100%, 99%, 5%);
+    margin: 1rem 10rem;
+}
+
+.headingcourse-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* CATALOG COURSE */
+.course-content {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que os cursos se ajustem na linha conforme necessário */
+    justify-content: flex-start;  /* Garante que os cursos comecem da esquerda */
+    gap: 20px;  /* Espaçamento entre os cursos */
+    margin: 0 auto;  /* Centraliza o conteúdo */
+    max-width: 1200px;  /* Define a largura máxima da área de cursos */
+}
+
+.course-box {
+    position: relative;
+    width: 31%;  /* Cada card ocupa 31% da largura da tela, resultando em 3 cursos por linha */
+    height: 380px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;  /* Espaço entre os cursos */
+    transition: all 0.3s ease;
+}
+
+/* Responsividade: Para telas menores (como tablets) */
+@media (max-width: 1024px) {
+    .course-box {
+        width: 48%;  /* Para telas menores, os cursos ocupam 48% da largura */
+    }
+}
+
+@media (max-width: 768px) {
+    .course-box {
+        width: 100%;  /* Para dispositivos móveis, cada curso ocupará toda a largura */
+    }
+}
+
+/* Ocultar cursos quando não correspondem à tag filtrada */
+.course-box.hidden {
+    display: none;  /* Os cursos filtrados não serão exibidos */
+}
+
+
+/* Esconde cursos que não correspondem à tag selecionada */
+.course-box.hidden {
+    display: none;
+}
+
+.course-box-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px;
+    color: white;
+}
+
+.course-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.course-type {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.watch-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #0056b3;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 192, 255, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.watch-btn:hover {
+    transform: scale(1.1);
+    background: #004cff;
+    box-shadow: 0 6px 12px rgba(0, 76, 255, 0.4), 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.watch-btn i {
+    transition: transform 0.3s ease;
+}
+
+.watch-btn:hover i {
+    transform: translateX(3px);
+}
+
+.hidden-courses {
+    display: none; /* Cursos inicialmente ocultos */
+}
+
+.show-all-btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.show-all-btn:hover {
+    background-color: #003d80;
+}
+
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .course-box {
+        width: 48%; /* Para telas menores (como tablets), os cursos ocupam 48% da largura da tela */
+    }
+}
+
+@media (max-width: 768px) {
+    .course-box {
+        width: 100%; /* Para dispositivos móveis, cada curso ocupará toda a largura */
+    }
+}
+
+.custom-footer {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    padding: 40px 20px;
+    margin-top: 100px;
+  }
+  
+  /* Logotipo no topo, alinhado à esquerda */
+  .footer-logo {
+    text-align: left;
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+  
+  .footer-logo img {
+    width: 150px;
+    margin-left: 50px;
+  }
+  
+  .footer-logo p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: 5px;
+    
+  }
+  
+  /* Parte inferior com informações */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 0 150px; /* Afastamento das bordas */
+  
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 180px; /* Dimensão mínima para colunas */
+    max-width: 250px; /* Ajusta o espaço ocupado pelas colunas */
+  }
+  
+  .footer-column h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-column ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #fff;
+  }
+  
+  /* Redes sociais */
+  .social-icons {
+    display: flex;
+    margin-top: 10px;
+    gap: 8px;
+  }
+  
+  .social-icons a {
+    color: #bbb;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #fff;
+  }
+  
+  /* Linha de separação */
+  .footer-divider {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 20px 0;
+  }
+  
+  /* Formulário de inscrição */
+  .footer-newsletter {
+    max-width: 300px; /* Define a largura máxima da caixinha */
+    text-align: left;
+  }
+  
+  .footer-newsletter h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .footer-newsletter p {
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-bottom: 15px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .newsletter-input {
+    padding: 10px;
+    font-size: 0.85rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
+    width: 180px; /* Ajuste de largura */
+  }
+  
+  .newsletter-input::placeholder {
+    color: #bbb;
+  }
+  
+  .newsletter-button {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-button:hover {
+    background-color: #0052cc;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-column {
+      max-width: 100%;
+    }
+  
+    .footer-newsletter {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .newsletter-form {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }

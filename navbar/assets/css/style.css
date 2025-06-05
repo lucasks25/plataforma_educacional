@@ -1,0 +1,1498 @@
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  background-image: linear-gradient(to right, #010c19, #000a14);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+
+/* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar *//* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  margin: 25px;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border-radius: 50px; 
+  margin-top: 10px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 40px;
+  vertical-align: middle;
+  margin-left: 30px;
+}
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.btn-login {
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.3s;
+  margin-right: 30px;
+}
+.btn-login:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Hero Section *//* Hero Section *//* Hero Section *//* Hero Section *//* Hero Section *//* Hero Section *//* Hero Section *//* Hero Section *//* Hero Section */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 70px;
+  color: #fff;
+  margin-top: -70px;
+}
+.content {
+  max-width: 500px;
+  margin-left: 20px;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.description {
+  font-size: 0.85rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+.btn-round {
+  padding: 15px 30px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-round:hover {
+  background-color: #ffffff;
+}
+
+.hero-image img {
+  width: 100%; /* Faz com que a imagem ocupe todo o espaço disponível */
+  max-width: 800px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px; /* Bordas arredondadas para a imagem */
+}
+
+.hero-image img:hover {
+  transform: scale(1.05); /* Leve zoom na imagem para dar um efeito de interatividade */
+}
+
+
+/* Animação para o movimento do fundo */
+@keyframes moveBackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-20%, -20%);
+  }
+}
+
+
+/* Estatísticas *//* Estatísticas *//* Estatísticas *//* Estatísticas *//* Estatísticas *//* Estatísticas *//* Estatísticas *//* Estatísticas *//* Estatísticas */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+  margin-top: 0px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+.stat-item h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  gap: 5px;
+}
+.stat-item h2 span {
+  position: relative;
+  display: inline-block;
+}
+.stat-item h2 span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 100px 20px;
+  }
+  .content {
+    text-align: center;
+  }
+  .navbar ul {
+    display: none;
+  }
+  .stats {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+}
+
+/* Patrocinadores */
+/* Section básica */
+.sponsors-section {
+  width: 100%;
+  height: 100px; /* Aumenta a seção */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa */
+  position: relative;
+  padding: 30px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.sponsors-container {
+  display: flex;
+  flex-direction: column; /* Duas linhas de logos */
+  gap: 50px; /* Espaçamento entre linhas */
+}
+
+.sponsors-row {
+  display: flex;
+  gap: 100px; /* Espaçamento entre logos */
+  animation: move-diagonal 25s linear infinite; /* Movimento diagonal mais lento */
+}
+
+.sponsor {
+  width: 150px; /* Tamanho dos logos */
+  opacity: 0.7; /* Inicialmente mais transparente */
+  transition: opacity 1s ease-in-out;
+  object-fit: contain; /* Mantém proporções */
+  margin: 0 15px;
+}
+
+/* Animação diagonal */
+@keyframes move-diagonal {
+  0% {
+    transform: translate(100%, 20%); /* Começa no canto inferior direito */
+    opacity: 0; /* Invisível no início */
+  }
+  10% {
+    opacity: 1; /* Torna-se visível */
+  }
+  50% {
+    transform: translate(-50%, -10%); /* Move-se para o centro */
+    opacity: 1; /* Permanece visível */
+  }
+  90% {
+    transform: translate(-150%, -30%); /* Sai pelo canto superior esquerdo */
+    opacity: 0; /* Torna-se invisível */
+  }
+  100% {
+    transform: translate(-200%, -30%); /* Completamente fora da tela */
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+/* About us *//* About us *//* About us *//* About us *//* About us *//* About us *//* About us *//* About us */
+.about-us {
+  padding: 100px 20px; /* Aumentando o espaçamento geral para mais respiro */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05); /* Sombra mais suave e mais difusa */
+  background-color: #121212; /* Mudando o fundo para um tom mais suave de azul */
+  border-radius: 10px; /* Bordas arredondadas para suavizar o design */
+
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 40px; /* Reduzindo um pouco o espaçamento entre os elementos */
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  color: #ffffff;
+  line-height: 1.7;
+}
+
+.about-text h2 {
+  font-size: 2.4em; /* Tamanho de fonte ajustado para um destaque mais suave */
+  margin-bottom: 20px;
+  color: #0056b3;
+  position: relative;
+  font-weight: 600;
+}
+
+.about-text h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 70px;
+  height: 3px;
+  background-color: #ff7f00;
+}
+
+.about-text p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.about-text .highlight {
+  color: #ff7f00;
+  font-weight: bold;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 16px 35px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  background-color: #1c4396;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-btn:hover {
+  background-color: #1e4aa7;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15); /* Adicionando uma sombra sutil no hover */
+}
+
+.about-image {
+  flex: 1;
+  text-align: left;
+  position: relative;
+  overflow: hidden; /* Para não vazar nada além da imagem */
+  top: 0px;
+}
+
+.about-image img {
+  width: 100%; /* Faz com que a imagem ocupe todo o espaço disponível */
+  max-width: 300px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px; /* Bordas arredondadas para a imagem */
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .cta-btn {
+    margin-top: 30px;
+  }
+
+  .about-image img {
+    max-width: 90%;
+  }
+}
+
+/* FIND */
+/* Estilo geral da seção "Nos Procure no Maps" */
+.find-us { 
+  padding: 100px 20px;  /* Aumentando o espaçamento para criar uma sensação de amplitude */
+  background-color: #ffffff; /* Cor de fundo clean e clara */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);  /* Sombra suave para dar profundidade */
+  border-radius: 16px;  /* Bordas mais arredondadas para um look mais moderno */
+  text-align: center;
+  margin-top: -10px; /* Mais espaço superior para destacar a seção */
+}
+
+.find-us-content {
+  display: flex;
+  justify-content: space-between;  /* Coloca os elementos lado a lado */
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.find-us-text h2 {
+  font-size: 2.8em;
+  color: #333;
+  font-weight: 600;  /* Menos peso para um estilo mais leve */
+  margin-bottom: 15px;
+  text-transform: uppercase;  /* Título maiúsculo para maior impacto */
+  letter-spacing: 1px;
+  margin-left: 100px;
+}
+
+.find-us-text p {
+  font-size: 1.2em;
+  color: #000000;  /* Cor de texto neutra */
+  line-height: 1.6;
+  margin-bottom: 25px;
+  max-width: 500px;
+  margin-left: 100px;
+  margin-right: auto;
+  text-align: left;
+}
+
+.address-box p {
+  margin: 0;
+  margin-left: 100px;
+
+}
+
+.find-us-map iframe {
+  border-radius: 12px;
+  width: 85%;  /* Para garantir que ocupe toda a largura disponível */
+  height: 300px;
+  margin-right: 400px;
+  
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .find-us-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .find-us-map iframe {
+    height: 250px; /* Ajuste no tamanho do mapa em dispositivos móveis */
+  }
+
+  .address-box {
+    max-width: 90%; /* Caixa de endereço maior em dispositivos móveis */
+  }
+
+  .find-us-text h2 {
+    font-size: 2.2em; /* Ajuste do título em telas menores */
+  }
+
+  .find-us-text p {
+    font-size: 1.1em;  /* Redução no tamanho do texto */
+  }
+}
+
+
+
+/* COURSE TAGS *//* COURSE TAGS *//* COURSE TAGS *//* COURSE TAGS *//* COURSE TAGS *//* COURSE TAGS *//* COURSE TAGS *//* COURSE TAGS *//* COURSE TAGS */
+.catalog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+
+}
+.category-title {
+  margin-bottom: 90px;
+  margin-top: 50px;
+}
+.category-title h2 {
+  font-size: 50px !important;
+  font-weight: bold;
+  color: white !important;
+  margin: 0;
+  text-align: center;
+}
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 75px;
+}
+.category-item {
+  display: flex;
+  align-items: center;
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+.category-item .icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+.category-item.selected {
+  background-color: #1c1c1c;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+}
+.category-item:hover {
+  background-color: #2e2e2e;
+}
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #828282;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.indicator.active {
+  background-color: #ffffff;
+}
+
+
+
+/* CATALOG COURSE *//* CATALOG COURSE *//* CATALOG COURSE *//* CATALOG COURSE *//* CATALOG COURSE *//* CATALOG COURSE *//* CATALOG COURSE *//* CATALOG COURSE *//* CATALOG COURSE */
+.headingcourse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--container-color);
+  padding: 8px 14px;
+  border: 1px solid hsl(200, 100%, 99%, 5%);
+  margin: 1rem 10rem;
+}
+.headingcourse-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.course-box {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.course-box-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.course-box .box-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px;
+  color: white; 
+}
+.box-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px;
+  color: white;
+}
+.course-title {
+  font-size: 1.2rem; 
+  font-weight: 600;
+  margin-bottom: 5px; 
+}
+.course-type {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 10px;
+  display: block;
+}
+.watch-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #0056b3;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 192, 255, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+.watch-btn:hover {
+  transform: scale(1.1);
+  background: #004cff;
+  box-shadow: 0 6px 12px rgba(0, 76, 255, 0.4), 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+.watch-btn i {
+  transition: transform 0.3s ease;
+}
+.watch-btn:hover i {
+  transform: translateX(3px);
+}
+.swiper-btn {
+  display: flex;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  position: static !important;
+  margin: 0 0 0 10px !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after{
+  color: var(--text-color);
+  font-size: 18px !important;
+  font-weight: 700;
+}
+.swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease; 
+}
+.swiper-slide {
+  flex: 0 0 auto;
+  width: auto; 
+  max-width: 100%; 
+}
+.course-content {
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+.explorar-cursos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* A altura da div ocupa a tela inteira */
+  margin-top: -270px;
+}
+.explorar-cursos .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explorar-cursos .btn-explorar {
+  background-color: #0056b3; /* Azul diferenciado */
+  color: #fff; /* Cor do texto */
+  padding: 15px 30px; /* Espaçamento dentro do botão */
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid #0056b3; /* Borda do botão */
+  border-radius: 8px; /* Bordas arredondadas (quase quadrado) */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.explorar-cursos .btn-explorar:hover {
+  background-color: #fff; /* Muda a cor do fundo ao passar o mouse */
+  color: #005f73; /* Muda a cor do texto ao passar o mouse */
+  border-color: #005f73; /* Muda a cor da borda ao passar o mouse */
+}
+
+
+/* CHOSE YOUR PLANE *//* CHOSE YOUR PLANE *//* CHOSE YOUR PLANE *//* CHOSE YOUR PLANE *//* CHOSE YOUR PLANE *//* CHOSE YOUR PLANE *//* CHOSE YOUR PLANE */
+:root {
+  --body-color: #080b16;
+  --container-color: #0d111f;
+  --body-alter-color: #0b0f1b;
+  --text-color: #fff;
+}
+body {
+  color: var(--text-color);
+  background: var(--body-color);
+}
+.container {
+  min-height: 100vh;
+  max-width: 1060px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  padding: 2rem 0 3rem;
+  margin-top: 150px;
+}
+.heading {
+  text-align: center;
+  font-size: 3rem; /* Aumentei o tamanho da fonte para dar mais destaque */
+  font-weight: 700; /* Deixei o texto mais forte */
+  margin-bottom: 2rem; /* Ajustei o espaçamento inferior */
+  color: #fff; /* Deixei o título branco para se destacar sobre o fundo escuro */
+  text-transform: uppercase; /* Tornar o texto maiúsculo para dar um impacto visual */
+  letter-spacing: 2px; /* Adicionando espaçamento entre as letras para um visual mais espaçado */
+  
+  position: relative; /* Para efeitos de decoração */
+  margin-bottom: 100px;
+}
+
+.heading::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background: #1abc9c; /* Cor vibrante para destacar */
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.price-plan {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste para não engordar */
+  gap: 3rem; /* Maior espaço entre os cards */
+}
+.price-box {
+  background: var(--container-color);
+  border-radius: 1rem;
+  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* Aumenta o padding para mais espaço interno */
+}
+.price-box:hover {
+  transform: scale(1.02);
+  transition: 0.5 all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.top-box {
+  padding: 30px;
+  border-radius: 1rem 1rem 0 0;
+  background: var(--body-alter-color);
+}
+.p-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.single {
+  color: rgb(45 212 191);
+}
+.price {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.price span {
+  font-size: 1.075rem;
+  font-weight: 500;
+  color: rgb(160 164 194);
+}
+.btn {
+  color: var(--text-color);
+  background: rgb(45 212 192/ 80%);
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.btn:hover {
+  transition: 0.3 all ease;
+}
+.single-btn:hover {
+  background: rgb(45 212 192/ 70%);
+}
+.top-box p {
+  font-size: 0.875rem;
+  color: #178fff;
+  text-align: center;
+}
+.bottom-box {
+  padding: 30px;
+}
+.p-box {
+  display: flex;
+  align-items: center;
+  column-gap: 15px 0;
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(30 41 58);
+}
+.p-box .bx {
+  font-size: 21px;
+  color: rgb(5 150 105);
+}
+.p-box p {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.premium-btn:hover {
+  background: rgb(79 70 228 / 80%);
+}
+.business {
+  color: #818cf8;
+}
+.business-btn {
+  background: #d97706;
+}
+.business-btn:hover {
+  background: rgb(217 119 6 / 80%);
+}
+/* Responsive */
+@media (max-width:1050px) {
+  .price-plan {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+@media (max-width:400px) {
+  .price-plan {
+    grid-template-columns: 1fr;
+  }
+}
+
+.most-popular {
+  background-color: #f39c12; /* Cor de destaque */
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: -15px;
+  left: 75px;
+  transform: rotate(-2deg); /* Leve rotação para dar um toque moderno */
+  font-size: 1rem;
+}
+
+.top-box {
+  padding: 20px;
+  position: relative;
+}
+
+
+
+/* Seção de chat *//* Seção de chat *//* Seção de chat *//* Seção de chat *//* Seção de chat *//* Seção de chat *//* Seção de chat *//* Seção de chat */
+
+
+:root {
+  --bg-color: #1e293b;
+  --chat-bg-color: #2d333b;
+  --bot-msg-color: #3b3f47;
+  --user-msg-color: #0056b3;
+  --btn-bg-color: #16606e;
+  --btn-hover-color: #457b86;
+  --border-highlight: #0056b3;
+  --text-color-light: #c9d1d9;
+  --text-color-dark: #ffffff;
+}
+
+/* Seção principal de interação */
+.interaction-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  padding: 20px 100px;
+  margin-top: -100px; /* Margem superior ajustada */
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Contêiner do chat */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Controle de largura do chat */
+  max-width: 550px;
+  margin-left: 20px; /* Espaçamento lateral esquerdo */
+  margin-right: 50px; /* Espaçamento lateral direito */
+  gap: 10px; /* Espaçamento entre mensagens */
+}
+
+/* Título da seção */
+.section-title {
+  text-align: left;
+  width: 50%; /* Controle da largura do texto */
+  padding-left: 0px; /* Espaçamento lateral ajustado */
+  margin-left: 30px; /* Espaçamento extra no título */
+  color: var(--text-color-light); /* Cor do texto */
+}
+
+.section-title h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--text-color-dark); /* Cor do título */
+  margin: 0; /* Remove espaçamento padrão */
+}
+
+.section-title p {
+  font-size: 1rem;
+  color: var(--text-color-light); /* Cor do parágrafo */
+  line-height: 1.6; /* Controle de espaçamento entre linhas */
+  margin-top: 10px; /* Margem superior */
+}
+
+/* Caixa de mensagens do chat */
+.chat-box {
+  position: relative;
+  background-color: var(--chat-bg-color);
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 15px; /* Bordas arredondadas */
+  height: 400px; /* Altura fixa da caixa */
+  overflow-y: scroll; /* Rolagem vertical */
+  display: flex; /* Flex layout para mensagens */
+  flex-direction: column; /* Mensagens dispostas em coluna */
+  gap: 10px; /* Espaçamento entre as mensagens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: var(--chat-bg-color); /* Cor de fundo da caixa */
+  border: 30px solid transparent;
+}
+
+
+/* Esconde a barra de rolagem em navegadores compatíveis */
+.chat-box::-webkit-scrollbar {
+  display: none;
+}
+.chat-box {
+  scrollbar-width: none; /* Barra de rolagem invisível */
+}
+
+/* Borda decorativa ao redor da caixa */
+.chat-box:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 3px dashed var(--border-highlight); /* Borda pontilhada */
+  border-radius: 15px; /* Arredonda bordas */
+  z-index: -1; /* Pseudo-elemento atrás da caixa */
+}
+
+/* Mensagens gerais */
+.message {
+  display: inline-block; /* Ocupa apenas o espaço necessário */
+  max-width: 80%; /* Limita largura */
+  padding: 10px 15px; /* Espaçamento interno */
+  border-radius: 15px; /* Bordas arredondadas */
+  font-size: 14px; /* Tamanho da fonte */
+  animation: slideIn 0.3s ease; /* Animação de entrada */
+}
+
+/* Mensagens do bot */
+.message.bot {
+  background-color: var(--bot-msg-color); /* Cor do fundo da mensagem do bot */
+  color: var(--text-color-light); /* Cor do texto do bot */
+  align-self: flex-start; /* Alinha mensagens à esquerda */
+  border-radius: 15px 15px 15px 5px; /* Detalhe no canto inferior esquerdo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Mensagens do usuário */
+.message.user {
+  background-color: var(--user-msg-color); /* Cor do fundo da mensagem do usuário */
+  color: #fff; /* Cor do texto do usuário */
+  align-self: flex-end; /* Alinha mensagens à direita */
+  border-radius: 15px 15px 5px 15px; /* Detalhe no canto inferior direito */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Contêiner de botões */
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; /* Espaçamento entre os botões */
+  justify-content: center; /* Alinha ao centro */
+  padding: 15px; /* Espaçamento interno */
+  width: 100%;
+}
+
+/* Botões */
+button {
+  background-color: #10191f; /* Cor de fundo do botão (escuro) */
+  color: #ffffff; /* Cor do texto do botão (verde neon) */
+  padding: 12px 18px; /* Tamanho do botão */
+  border: 2px solid #004cff; /* Borda verde neon */
+  border-radius: 25px; /* Bordas arredondadas */
+  cursor: pointer;
+  font-size: 0.95rem; /* Tamanho da fonte */
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Transições suaves */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra inicial */
+}
+
+button:hover {
+  background-color: #004cff; /* Cor de fundo no hover (verde neon) */
+  color: #10191f; /* Cor do texto no hover (escuro) */
+  transform: translateY(-2px); /* Eleva o botão */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra maior */
+}
+
+button:active {
+  transform: translateY(0); /* Volta ao nível original */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Sombra reduzida */
+}
+
+/* Animação de fade */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .interaction-title h2 {
+    font-size: 2rem; /* Ajusta o tamanho do título */
+  }
+
+  .chat-box {
+    height: 300px; /* Reduz altura da caixa de mensagens */
+  }
+
+  button {
+    font-size: 0.85rem; /* Ajusta tamanho da fonte do botão */
+    padding: 10px 15px; /* Reduz o tamanho do botão */
+  }
+}
+
+
+
+
+/* Help Section *//* Help Section *//* Help Section *//* Help Section *//* Help Section *//* Help Section *//* Help Section *//* Help Section *//* Help Section */
+/* Estilos para a seção de especialistas */
+/* Estilos para a seção de especialistas */
+.expert-section {
+  background-color: #121212;
+  padding: 60px 20px;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 15px;
+  max-width: 1200px;
+  color: #e0e0e0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease;
+}
+
+.expert-section:hover {
+  transform: translateY(-5px);
+}
+
+.expert-section h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.expert-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.expert-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.expert-section ul li {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  color: #cccccc;
+}
+
+.expert-section ul li::before {
+  content: '✔';
+  font-size: 1.5em;
+  color: #1abc9c;
+  margin-right: 10px;
+}
+
+.contact-specialist-button {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  color: #ffffff;
+  background-color: #25d366; /* Cor oficial do WhatsApp */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(26, 188, 156, 0.4);
+  margin-top: 40px;
+}
+
+.contact-specialist-button i {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+.contact-specialist-button:hover {
+  background-color: #00ff44; /* Cor mais escura para hover */
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(26, 188, 156, 0.5);
+}
+
+.contact-specialist-button:active {
+  background-color: #00ff44; /* Cor mais intensa ao clicar */
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(26, 188, 156, 0.3);
+}
+
+
+
+
+
+/* Advantages Premium *//* Advantages Premium *//* Advantages Premium *//* Advantages Premium *//* Advantages Premium *//* Advantages Premium */
+.premium-advantages {
+  position: relative;
+  padding: 60px;
+  overflow: hidden;
+  margin-top: -50px;
+  margin-bottom: -10px;
+}
+
+.premium-advantages .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Texto à Esquerda */
+.text-content {
+  max-width: 450px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.text-content .highlight {
+  font-size: 0.9rem;
+  color: #00f0ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.text-content h2 {
+  font-size: 2.8rem;
+  color: #00f0ff;
+  margin: 10px 0 20px;
+  line-height: 1.2;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  color: #d4d4d4;
+  margin-bottom: 30px;
+}
+
+.text-content .btn {
+  padding: 15px 30px;
+  background-color: #00f0ff;
+  color: #0a0e17;
+  font-weight: bold;
+  border-radius: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-content .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 240, 255, 0.5);
+}
+
+/* Grid de Benefícios */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: #121826;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.4);
+}
+
+.benefit-card .icon {
+  font-size: 2.5rem;
+  color: #00f0ff;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  color: #d4d4d4;
+  line-height: 1.5;
+}
+
+/* Efeitos de Fundo */
+.premium-advantages::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none; /* Evita interferir na interação do usuário */
+  opacity: 0.2; /* Deixa o efeito mais discreto */
+}
+
+.premium-advantages .container {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* FAQ Section *//* FAQ Section *//* FAQ Section *//* FAQ Section *//* FAQ Section *//* FAQ Section *//* FAQ Section */
+.faq-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
+.faq-section h2 {
+  color: #00c0ff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.faq-section h2 .faq-highlight {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #00c0ff;
+}
+.faq-item {
+  border-bottom: 1px solid #333;
+  padding: 15px 0;
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.4s ease;
+}
+.faq-question:hover {
+  color: #00c0ff;
+}
+.faq-icon {
+  font-size: 1.2rem;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0; 
+  transition: max-height 0.5s ease, opacity 0.5s ease; 
+  color: #b0b0b0;
+}
+.faq-answer p {
+  margin: 10px 0;
+}
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  opacity: 1;
+}
+
+
+/* Vídeo Secton *//* Vídeo Secton *//* Vídeo Secton *//* Vídeo Secton *//* Vídeo Secton *//* Vídeo Secton *//* Vídeo Secton *//* Vídeo Secton *//* Vídeo Secton */
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+.video-container {
+  width: 70vw;
+  max-width: 1000px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* About us *//* About us *//* About us *//* About us *//* About us *//* About us *//* About us *//* About us *//* About us *//* About us *//* About us *//* About us */
+
+
+/* Footer *//* Footer *//* Footer *//* Footer *//* Footer *//* Footer *//* Footer *//* Footer *//* Footer *//* Footer *//* Footer *//* Footer *//* Footer *//* Footer */
+/* Estilo geral do footer */
+.custom-footer {
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  padding: 40px 20px;
+}
+
+/* Logotipo no topo, alinhado à esquerda */
+.footer-logo {
+  text-align: left;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.footer-logo img {
+  width: 150px;
+  margin-left: 50px;
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-top: 5px;
+  
+}
+
+/* Parte inferior com informações */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+  padding: 0 150px; /* Afastamento das bordas */
+
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 180px; /* Dimensão mínima para colunas */
+  max-width: 250px; /* Ajusta o espaço ocupado pelas colunas */
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+/* Redes sociais */
+.social-icons {
+  display: flex;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.social-icons a {
+  color: #bbb;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+/* Linha de separação */
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background: #333;
+  margin: 20px 0;
+}
+
+/* Formulário de inscrição */
+.footer-newsletter {
+  max-width: 300px; /* Define a largura máxima da caixinha */
+  text-align: left;
+}
+
+.footer-newsletter h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-newsletter p {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-bottom: 15px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-input {
+  padding: 10px;
+  font-size: 0.85rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #222;
+  color: #fff;
+  width: 180px; /* Ajuste de largura */
+}
+
+.newsletter-input::placeholder {
+  color: #bbb;
+}
+
+.newsletter-button {
+  padding: 10px 15px;
+  font-size: 0.85rem;
+  background-color: #0066ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #0052cc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    max-width: 100%;
+  }
+
+  .footer-newsletter {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Background effects *//* Background effects *//* Background effects *//* Background effects *//* Background effects *//* Background effects *//* Background effects *//* Background effects */
+/* teste */
+

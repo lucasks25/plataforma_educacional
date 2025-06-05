@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro educacional Salute online</title>
+  <link rel="stylesheet" href="./assets/css/cursos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+
+</head>
+
+<body>
+
+    <!-- Navegação -->
+  <header class="navbar">
+    <div class="logo-container">
+        <a href="index.html">
+          <img src="./assets/images/logo.png" alt="Logo Salute" class="logo">
+        </a>
+      </div>
+      
+    <nav>
+      <ul>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <ul>
+          <li><a href="https://wa.me/+5511917092509?text=Estou%20com%20dúvidas" target="_blank">Fale Conosco</a></li>
+        </ul>
+        
+      </ul>
+    </nav>
+    <a href="login.html" class="btn-login"> Cadastro / Login </a>
+  </header>
+
+
+  <section class="learning-section">
+    <div class="container">
+      <h2 class="section-title">APRENDA ALGO NOVO A QUALQUER MOMENTO</h2>
+      <div class="content-wrapper">
+        <div class="image-feature">
+          <div class="text-group">
+            <div class="feature-text">
+              <i class="check-icon">&#10003;</i>
+              <p>As aulas se encaixam no seu dia</p>
+            </div>
+            <div class="feature-text">
+              <i class="check-icon">&#10003;</i>
+              <p>Aprenda no seu ritmo, em qualquer ordem.</p>
+            </div>
+          </div>
+        </div>
+        <div class="image-feature">
+          <img src="./assets/images/logo sem sombra.png" alt="Imagem 2" class="secondary-image">
+          <div class="text-group">
+            <div class="feature-text">
+              <i class="check-icon">&#10003;</i>
+              <p>Descubra novas paixões</p>
+            </div>
+            <div class="feature-text">
+              <i class="check-icon">&#10003;</i>
+              <p>Mais de 200 cursos disponíveis.</p>
+            </div>
+          </div>
+        </div>
+        <div class="image-feature">
+          <div class="text-group">
+            <div class="feature-text">
+              <i class="check-icon">&#10003;</i>
+              <p>A qualquer hora, em qualquer lugar</p>
+            </div>
+            <div class="feature-text">
+              <i class="check-icon">&#10003;</i>
+              <p>Assista no computador, TV, ou tablet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+
+  <section class="course-section">
+    <div class="category-title">
+        <h2>Os melhores cursos<br>Estão aqui!</h2>
+    </div>
+
+    <!-- Contêiner de categorias (tags) -->
+    <div class="category-list">
+      <div class="category-item" data-tag="preparacao-para-vestibular">
+        Preparação para Vestibulares e Concursos Médicos
+     </div>     
+        <div class="category-item" data-tag="nutricao">
+            Nutrição e Dietética
+        </div>
+        <div class="category-item" data-tag="psicologia">
+            Psicologia e Saúde Mental
+        </div>
+        <div class="category-item" data-tag="saude-publica">
+            Saúde Pública
+        </div>
+        <div class="category-item" data-tag="terapias">
+            Terapias Complementares
+        </div>
+        <div class="category-item" data-tag="gestao">
+            Gestão em Saúde
+        </div>
+        <div class="category-item" data-tag="bioetica">
+            Bioética e Ética Profissional
+        </div>
+        <div class="category-item" data-tag="tecnologia">
+            Tecnologias Médicas
+        </div>
+        <div class="category-item" data-tag="pesquisa">
+            Pesquisa e Inovação em Saúde
+        </div>
+        <div class="category-item" data-tag="mostrar-todos" id="show-all">
+          Mostrar todos
+        </div>
+        
+
+    </div>
+
+    <!-- Contêiner de cursos -->
+    <div class="course-content">
+        <!-- Curso 1 -->
+        <div class="course-box" data-tags="vestibular psicologia">
+            <div class="course-box-img">
+                <img src="img/curso1.jpg" alt="Curso Preparação para Vestibulares">
+            </div>
+            <div class="box-text">
+                <div class="course-title">Preparação para Vestibulares</div>
+                <div class="course-type">Cursos para Vestibulares e Concursos Médicos</div>
+                <a href="#" class="watch-btn"><i class="fa fa-play"></i></a>
+            </div>
+        </div>
+
+        <!-- Curso 2 -->
+        <div class="course-box" data-tags="nutricao saude-publica">
+            <div class="course-box-img">
+                <img src="img/curso2.jpg" alt="Curso de Nutrição">
+            </div>
+            <div class="box-text">
+                <div class="course-title">Nutrição e Dietética</div>
+                <div class="course-type">Cursos de Nutrição e Saúde Pública</div>
+                <a href="#" class="watch-btn"><i class="fa fa-play"></i></a>
+            </div>
+        </div>
+
+        <!-- Curso 3 -->
+        <div class="course-box" data-tags="psicologia">
+            <div class="course-box-img">
+                <img src="img/curso3.jpg" alt="Curso de Psicologia">
+            </div>
+            <div class="box-text">
+                <div class="course-title">Psicologia e Saúde Mental</div>
+                <div class="course-type">Cursos de Psicologia e Saúde Mental</div>
+                <a href="#" class="watch-btn"><i class="fa fa-play"></i></a>
+            </div>
+        </div>
+
+        <!-- Curso 4 -->
+        <div class="course-box" data-tags="terapias">
+            <div class="course-box-img">
+                <img src="img/curso4.jpg" alt="Curso de Terapias Complementares">
+            </div>
+            <div class="box-text">
+                <div class="course-title">Terapias Complementares</div>
+                <div class="course-type">Terapias Alternativas e Complementares</div>
+                <a href="#" class="watch-btn"><i class="fa fa-play"></i></a>
+            </div>
+        </div>
+
+        <!-- Curso 5 -->
+        <div class="course-box" data-tags="gestao">
+            <div class="course-box-img">
+                <img src="img/curso5.jpg" alt="Curso de Gestão em Saúde">
+            </div>
+            <div class="box-text">
+                <div class="course-title">Gestão em Saúde</div>
+                <div class="course-type">Gestão de Sistemas e Processos de Saúde</div>
+                <a href="#" class="watch-btn"><i class="fa fa-play"></i></a>
+            </div>
+        </div>
+
+        <!-- Curso 6 -->
+        <div class="course-box" data-tags="bioetica">
+            <div class="course-box-img">
+                <img src="img/curso6.jpg" alt="Curso de Bioética">
+            </div>
+            <div class="box-text">
+                <div class="course-title">Bioética e Ética Profissional</div>
+                <div class="course-type">Ética no Exercício da Profissão</div>
+                <a href="#" class="watch-btn"><i class="fa fa-play"></i></a>
+            </div>
+        </div>
+        
+        <!-- Mais cursos... -->
+
+        
+    </div>
+    <!-- Botão para expandir -->
+    <button id="toggle-button" class="show-all-btn">Mostrar Todos</button>
+
+    
+</section>
+
+
+
+
+<footer class="custom-footer">
+    <!-- Logotipo no topo -->
+    <div class="footer-logo">
+      <img src="./assets/images/logo.png" alt="Logo">
+    </div>
+  
+    <!-- Linha de separação opcional -->
+    <hr class="footer-divider">
+  
+    <!-- Informações principais e caixinha de newsletter -->
+    <div class="footer-content">
+      <!-- Colunas de informações -->
+      <div class="footer-column">
+        <h4>Sobre</h4>
+        <ul>
+          <li><a href="#">Série Residência Médica</a></li>
+          <li><a href="#">Aprovados</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Produtos</h4>
+        <ul>
+          <li><a href="#">Residência Médica R1</a></li>
+          <li><a href="#">Residência Médica R+</a></li>
+          <li><a href="#">Revalida</a></li>
+          <li><a href="#">Soluções Institucionais</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Fale Conosco</h4>
+        <ul>
+          <li><a href="#">Central de Relacionamento</a></li>
+          <li><a href="#">Telefone e WhatsApp</a></li>
+          <li><a href="#">centraldoaluno@escola.com</a></li>
+          <li><a href="#">Ouvidoria</a></li>
+        </ul>
+      </div>
+  
+      <!-- Caixinha de newsletter -->
+      <div class="footer-newsletter">
+        <h4>Fique por dentro de todas as notícias</h4>
+        <p>Inscreva-se para receber novidades diretamente no seu e-mail</p>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Digite seu e-mail"
+            required
+          />
+          <button type="submit" class="newsletter-button">Enviar</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Linha de separação opcional -->
+    <hr class="footer-divider">
+  
+    <!-- Créditos no rodapé -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  
+
+
+
+<!-- Swiper JS -->
+<script src="./assets/js/cursos.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!-- Adicionando Font Awesome para o ícone do olho -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <img src="./assets/images/logo.png" alt="Logo" class="logo">
+  </header>
+  
+  <div class="form-container">
+    <!-- Formulário de Login -->
+    <form id="loginForm" class="active">
+      <h2>Login</h2>
+    
+      <!-- Campo de E-mail -->
+      <input type="email" id="loginEmail" placeholder="E-mail">
+      <span class="error-message" id="login-email-error"></span> <!-- Mensagem de erro para o e-mail -->
+    
+      <!-- Campo de Senha -->
+      <div class="password-field">
+        <input type="password" id="loginPassword" placeholder="Senha">
+        <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">
+          <i class="fas fa-eye"></i>
+        </button>
+      </div>
+      <span class="error-message" id="password-error"></span> <!-- Mensagem de erro para a senha -->
+    
+      <!-- Botão de Login -->
+      <button type="submit" class="btn-submit">Entrar</button>
+    
+      <!-- Links para registro e recuperação de senha -->
+      <p>Não tem uma conta? 
+        <button type="button" class="switch-form-btn" onclick="switchForm('register')">Registrar</button>
+      </p>
+    
+      <p>
+        <a href="#" class="forgot-password" onclick="showForgotPassword()">Esqueci a Senha</a>
+      </p>
+      <div id="forgot-password-section" style="display: none;">
+        <input type="email" id="forgotEmail" placeholder="Digite seu e-mail" required>
+        <button onclick="sendPasswordRecovery()">Enviar</button>
+      </div>
+      
+    </form>
+    
+    
+    
+    
+
+    <!-- Formulário de Registro -->
+<form id="registerForm">
+  <h2>Registrar</h2>
+
+  <input type="text" id="name" placeholder="Nome Completo">
+  <span class="error-message" id="name-error"></span>
+
+  <input type="email" id="registerEmail" placeholder="E-mail">
+  <span class="error-message" id="register-email-error"></span>
+
+  <div class="password-field">
+    <input type="password" id="registerPassword" placeholder="Senha" oninput="checkPasswordStrength()">
+    <span class="error-message" id="register-password-error"></span>
+    <button type="button" class="toggle-password" onclick="togglePassword('registerPassword')">
+      <i class="fas fa-eye"></i>
+    </button>
+  </div>
+
+  <!-- Requisitos da senha -->
+  <div id="passwordRequirements">
+    <ul>
+      <li id="lengthRequirement" class="neutral">8 caracteres</li>
+      <li id="uppercaseRequirement" class="neutral">Uma letra maiúscula</li>
+      <li id="lowercaseRequirement" class="neutral">Uma letra minúscula</li>
+      <li id="numberRequirement" class="neutral">Um número</li>
+      <li id="specialCharRequirement" class="neutral">Um caractere especial</li>
+    </ul>
+  </div>
+
+  <button type="submit" class="btn-submit">Cadastrar</button>
+
+  <p>Já tem uma conta? <button type="button" class="switch-form-btn" onclick="switchForm('login')">Entrar</button></p>
+</form>
+
+    
+    
+  </div>
+
+  <script src="./assets/js/login.js"></script>
+</body>
+</html>

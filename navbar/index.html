@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro educacional Salute online</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+
+</head>
+
+<body>
+
+  <!-- Navegação -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="./assets/images/logo.png" alt="Logo Salute" class="logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <ul>
+          <li><a href="https://wa.me/+5511917092509?text=Estou%20com%20dúvidas" target="_blank">Fale Conosco</a></li>
+        </ul>
+        
+      </ul>
+    </nav>
+    <a href="login.html" class="btn-login"> Cadastro / Login </a>
+  </header>
+
+
+  <!-- Hero Section -->
+ 
+
+  <section class="hero">
+    <div class="content"> 
+      <h1>Desvende os Segredos do Conhecimento com a Salute</h1>
+      <p class="description">Oferecemos as ferramentas e o suporte necessários para transformar seu aprendizado e abrir novas possibilidades na sua carreira.</p>
+      <a href="#planos">
+        <button class="btn-round">Comece Agora</button>
+      </a> 
+    </div> 
+    <div class="hero-image"> 
+      <img src="./assets/images/Sobrenós.png" alt="Imagem de estudo">
+    </div>
+  </section>
+  
+
+  <!-- Estatísticas -->
+  <section class="stats">
+    <div class="stat-item">
+      <h2>25mil+</h2>
+      <p>Alunos Inscritos</p>
+    </div>
+    <div class="stat-item">
+      <h2>98%</h2>
+      <p>Satisfação dos Alunos</p>
+    </div>
+    <div class="stat-item">
+      <h2>1200+</h2>
+      <p>Recursos de Aprendizado</p>
+    </div>
+    <div class="stat-item">
+      <h2>12</h2>
+      <p>Reconhecimento no Mercado</p>
+    </div>
+  </section>
+
+
+  <!-- Patrocinadores -->
+  <section class="sponsors-section">
+    <div class="sponsors-container">
+      <!-- Linha 1 -->
+      <div class="sponsors-row">
+        <img src="./assets/images/logo.png" alt="Patrocinador 1" class="sponsor">
+        <img src="sponsor2.png" alt="Patrocinador 2" class="sponsor">
+        <img src="sponsor3.png" alt="Patrocinador 3" class="sponsor">
+        <img src="sponsor4.png" alt="Patrocinador 4" class="sponsor">
+        <img src="sponsor5.png" alt="Patrocinador 5" class="sponsor">
+      </div>
+  </section>
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  <section id="cursos" class="course-section">
+    <div class="category-title">
+      <h2>Uma dose de inspiração,<br>sempre que você precisar.</h2>
+    </div>
+  
+    <!-- Contêiner para as categorias -->
+    <div class="category-list">
+      <div class="category-item highlighted selected" data-category="vestibular">
+        <span class="icon">★</span> Preparação para Vestibulares e Concursos Médicos
+      </div>
+      <div class="category-item" data-category="nutricao">Nutrição e Dietética</div>
+      <div class="category-item" data-category="psicologia">Psicologia e Saúde Mental</div>
+      <div class="category-item" data-category="publica">Saúde Pública</div>
+      <div class="category-item" data-category="terapias">Terapias Complementares</div>
+      <div class="category-item" data-category="gestao">Gestão em Saúde</div>
+      <div class="category-item" data-category="bioetica">Bioética e Ética Profissional</div>
+      <div class="category-item" data-category="tecnologias">Tecnologias Médicas</div>
+      <div class="category-item" data-category="pesquisa">Pesquisa e Inovação em Saúde</div>
+      <div class="category-item" data-category="all">Mostrar Todos</div>
+    </div>
+  </section>
+  
+  <section class="popularcontainer" id="popular">
+    <!-- Heading -->
+    <div class="headingcourse">
+      <h2 class="headingcourse-title">Mais Procurados</h2>
+      <!-- Swiper Buttons -->
+      <div class="swiper-btn">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  
+    <!-- Content-->
+    <div class="course-content swiper">
+      <div class="swiper-wrapper">
+        <!-- Courses Box 1-->
+        <div class="swiper-slide" data-category="vestibular">
+          <div class="course-box">
+            <img src="./assets/images/Design sem nome.png" alt="" class="course-box-img">
+            <div class="box-text">
+              <h2 class="course-title">Curso de Vestibular</h2>
+              <span class="course-type">Preparação para Vestibulares</span>
+              <a href="#" class="watch-btn play-btn">
+                <i class='bx bx-right-arrow'></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Courses Box 2-->
+        <div class="swiper-slide" data-category="nutricao">
+          <div class="course-box">
+            <img src="./assets/images/pexels-chris-czermak-1280625-2444429.jpg" alt="" class="course-box-img">
+            <div class="box-text">
+              <h2 class="course-title">Curso de Nutrição</h2>
+              <span class="course-type">Nutrição e Dietética</span>
+              <a href="#" class="watch-btn play-btn">
+                <i class='bx bx-right-arrow'></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Courses Box 3-->
+        <div class="swiper-slide" data-category="psicologia">
+          <div class="course-box">
+            <img src="./assets/images/pexels-chris-czermak-1280625-2444429.jpg" alt="" class="course-box-img">
+            <div class="box-text">
+              <h2 class="course-title">Curso de Psicologia</h2>
+              <span class="course-type">Psicologia e Saúde Mental</span>
+              <a href="#" class="watch-btn play-btn">
+                <i class='bx bx-right-arrow'></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- More Courses... -->
+        <div class="swiper-slide" data-category="psicologia">
+          <div class="course-box">
+            <img src="./assets/images/pexels-chris-czermak-1280625-2444429.jpg" alt="" class="course-box-img">
+            <div class="box-text">
+              <h2 class="course-title">Curso de Psicologia</h2>
+              <span class="course-type">Psicologia e Saúde Mental</span>
+              <a href="#" class="watch-btn play-btn">
+                <i class='bx bx-right-arrow'></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- More Courses... -->
+        <div class="swiper-slide" data-category="psicologia">
+          <div class="course-box">
+            <img src="./assets/images/pexels-chris-czermak-1280625-2444429.jpg" alt="" class="course-box-img">
+            <div class="box-text">
+              <h2 class="course-title">Curso de Psicologia</h2>
+              <span class="course-type">Psicologia e Saúde Mental</span>
+              <a href="#" class="watch-btn play-btn">
+                <i class='bx bx-right-arrow'></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="explorar-cursos">
+      <button class="btn-explorar" onclick="window.location.href='cursos.html'">Explorar Cursos</button>
+    </div>
+  </section>
+  
+
+
+
+  
+
+
+  
+
+ 
+
+  <section class="interaction-section">
+    <div class="chat-container">
+      <div class="chat-box">
+        <div id="userMessages"></div>
+      </div>
+      <div class="buttons-container">
+        <button onclick="addMessage('Falar com atendente')">Falar com Atendente</button>
+        <button onclick="addMessage('Tirar dúvida de cursos')">Tirar Dúvidas de Cursos</button>
+        <button onclick="addMessage('Detalhes sobre matrícula')">Detalhes sobre Matrícula</button>
+        <button onclick="addMessage('Informações sobre professores')">Informações sobre Professores</button>
+        <button onclick="addMessage('Saiba mais sobre os cursos')">Saiba mais sobre os Cursos</button>
+      </div>
+    </div>
+    <div class="section-title">
+      <h1>Encontre o Curso Ideal para você!</h1>
+      <p>Converse com o nosso chatbot para encontrar o curso perfeito para você! As vagas estão se esgotando rapidamente! Não perca tempo, comece agora e garanta sua vaga!</p>
+    </div>
+  </section>
+  
+
+
+<!-- Falar com Especialista -->
+<section class="expert-section">
+  <h2>Fale com um de nossos especialistas!</h2>
+  <p>Está com dúvidas sobre qual curso escolher ou precisa de mais informações? Nossos especialistas estão prontos para ajudar você a encontrar o curso ideal e esclarecer qualquer pergunta!</p>
+  <ul>
+    <li>Suporte especializado para escolha de cursos</li>
+    <li>Orientação sobre programas e materiais</li>
+    <li>Aconselhamento sobre planos de estudos e carreira</li>
+  </ul>
+  <button class="contact-specialist-button">Clique aqui e converse agora</button>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- CONTAINER PLANOS -->
+<section id="planos" class="container">
+  <!-- Heading -->
+  <h2 class="heading">Encontre o plano ideal para o seu sucesso!</h2>
+
+  <!-- Price Plan -->
+  <div class="price-plan">
+  
+    <!-- Plano Básico -->
+    <div class="price-box">
+      <div class="top-box">
+        <h2 class="p-name basico">Plano Básico</h2>
+        <h2 class="price">R$79,90 <span>/ mês</span></h2>
+        <a href="#" class="btn basico-btn">Escolher Plano</a>
+        <p>R$ 99,90 /mês na renovação</p>
+      </div>
+      <!-- Benefícios do Plano Básico -->
+      <div class="bottom-box">
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Acesso flexível a cursos individuais conforme sua escolha</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Conteúdo essencial para começar a aprender de forma sólida</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Certificado básico para valorizar seu aprendizado</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Suporte dedicado para resolver suas dúvidas durante o horário comercial</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Ideal para quem quer começar a aprender a um preço acessível</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plano Intermediário -->
+    <div class="price-box">
+      <div class="top-box">
+        <div class="most-popular">
+          <span>Mais Procurado</span>
+            </div>
+        <h2 class="p-name intermediario">Plano Intermediário</h2>
+        <h2 class="price">R$159,90 <span>/ mês</span></h2>
+        <a href="#" class="btn intermediario-btn">Escolher Plano</a>
+        <p>R$ 179,90 /mês na renovação</p>
+      </div>
+      <!-- Benefícios do Plano Intermediário -->
+      <div class="bottom-box">
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Acesso a cursos de nível intermediário em áreas específicas de seu interesse</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Conteúdo aprofundado para expandir seu conhecimento de forma prática</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Certificado que agrega valor ao seu currículo e ao seu desenvolvimento profissional</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Suporte prioritário durante horário comercial, para que você não perca tempo</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Perfeito para quem deseja avançar mais rapidamente e ter acesso a conteúdos exclusivos</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plano Premium -->
+    <div class="price-box">
+      <div class="top-box">
+        <h2 class="p-name premium">Plano Premium</h2>
+        <h2 class="price">R$299,90 <span>/ mês</span></h2>
+        <a href="#" class="btn premium-btn">Escolher Plano</a>
+        <p>R$ 349,90 /mês na renovação</p>
+      </div>
+      <!-- Benefícios do Plano Premium -->
+      <div class="bottom-box">
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Acesso ilimitado a todos os cursos dentro de uma área de conhecimento escolhida</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Conteúdo avançado com práticas, estudos de caso e mais, ideal para quem busca especialização</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Certificado profissional de alto impacto, reconhecido pelas melhores empresas do mercado</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Suporte 24/7, para você aprender no seu ritmo e tirar dúvidas a qualquer momento</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Ideal para quem deseja se tornar um especialista e ter acesso a conteúdos atualizados constantemente</p>
+        </div>
+        <div class="p-box">
+          <i class='bx bx-check'></i>
+          <p>Projetos práticos e exercícios extras para melhorar suas habilidades</p>
+        </div>
+      </div>
+    </div>
+  
+  </div> <!-- End of price-plan -->
+</section>
+
+
+
+
+
+  <section class="premium-advantages">
+    <div class="container">
+      <!-- Texto à esquerda -->
+      <div class="text-content">
+        <span class="highlight">o plano mais escolhido</span>
+        <h2>Vantagens de ser PRO</h2>
+        <p>
+          Descubra os benefícios que tornam o plano PRO a melhor escolha para você! 
+          Mergulhe em um mundo de aprendizado avançado e vantagens exclusivas, com 
+          ferramentas que maximizam sua experiência de estudo.
+        </p>
+        <a href="#" class="btn">QUERO SER PRO</a>
+      </div>
+  
+      <!-- Benefícios à direita -->
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="icon"><i class="bx bx-brain"></i></div>
+          <h3>Acesso Ilimitado</h3>
+          <p>
+            Tenha acesso a todos os cursos da plataforma, sem restrições de 
+            conteúdo ou temas.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon"><i class="bx bx-line-chart"></i></div>
+          <h3>Certificação Avançada</h3>
+          <p>
+            Obtenha certificados PRO reconhecidos no mercado e aumente suas 
+            chances profissionais.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon"><i class="bx bx-group"></i></div>
+          <h3>Suporte Prioritário</h3>
+          <p>
+            Conte com um suporte especializado, pronto para tirar todas as 
+            suas dúvidas rapidamente.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon"><i class="bx bx-world"></i></div>
+          <h3>Aulas Exclusivas</h3>
+          <p>
+            Acesso a conteúdos e aulas extras criadas especialmente para 
+            assinantes PRO.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  
+  
+  
+    <!-- FAQ Section -->
+    <section id="duvidas" class="faq-section">
+      <h2><span class="faq-highlight">FAQ</span> Dúvidas frequentes</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>01. Para quem é a plataforma?</span>
+          <span class="faq-icon">⌄</span>
+        </div>
+        <div class="faq-answer">
+          <p>A plataforma é ideal para pessoas que desejam aprender online em diversas áreas, como tecnologia, negócios e design, com cursos acessíveis para iniciantes e profissionais avançados.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>02. Quais são as formas de pagamento?</span>
+          <span class="faq-icon">⌄</span>
+        </div>
+        <div class="faq-answer">
+          <p>Oferecemos opções como cartão de crédito parcelado, boleto bancário, Pix, entre outras formas populares de pagamento.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>03. Não gostei, posso cancelar?</span>
+          <span class="faq-icon">⌄</span>
+        </div>
+        <div class="faq-answer">
+          <p>Sim, você pode cancelar até 7 dias após a compra sem custos adicionais, conforme a política de reembolso.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>04. Ainda tenho dúvidas, como faço?</span>
+          <span class="faq-icon">⌄</span>
+        </div>
+        <div class="faq-answer">
+          <p>Você pode entrar em contato com nossa equipe de suporte por e-mail ou WhatsApp. Estamos prontos para ajudar!</p>
+        </div>
+      </div>
+    </section>
+    
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/3LTmRyHvCcM?si=-ur1lWLHQLZ3p33B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+
+  <section class="about-us" id="about">
+    <div class="about-content">
+      <!-- Imagem estilizada à esquerda -->
+      <div class="about-image">
+        <img src="./assets/images/Design_sem_nome__7_-removebg-preview.png" alt="Imagem sobre a escola SALUTE">
+      </div>
+      <!-- Texto à direita com maior ênfase e organização -->
+      <div class="about-text">
+        <h2>Sobre nós</h2>
+        <p>
+          A <span class="highlight">SALUTE</span> começou como uma escola presencial, comprometida em oferecer educação de qualidade e transformar vidas. Hoje, expandimos para o ambiente online, mantendo a excelência que é a nossa marca.
+        </p>
+        <p>
+          Com uma equipe dedicada de educadores experientes, nossos cursos são planejados para garantir que cada aluno atinja seu potencial máximo. Nosso compromisso é guiá-lo rumo ao sucesso, combinando tradição e inovação em um só lugar.
+        </p>
+        <p>
+          Acreditamos no poder da educação para abrir portas e transformar realidades. Junte-se à <span class="highlight">SALUTE</span> e faça parte dessa jornada de conhecimento e realização.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="find-us" id="find-us">
+    <div class="find-us-content">
+      <div class="find-us-text">
+        <h2>Nos Procure no Maps!</h2>
+        <p>Nos encontramos facilmente no Google Maps. Veja nossa localização no mapa abaixo:</p>
+        <div class="address-box">
+          <p><strong>Endereço:</strong> Rua Uruguaiana, 72 - Vila Alzira, Santo André - SP, 09195-360</p>
+        </div>
+      </div>
+      <div class="find-us-map">
+        <!-- Embedding Google Map com localização -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14617.035649538011!2d-46.5196816!3d-23.6666972!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4279167b6085%3A0xc0de5785813a55b4!2sCentro%20Educacional%20Salute!5e0!3m2!1spt-BR!2sbr!4v1733353803244!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  <footer class="custom-footer">
+    <!-- Logotipo no topo -->
+    <div class="footer-logo">
+      <img src="./assets/images/logo.png" alt="Logo">
+    </div>
+  
+    <!-- Linha de separação opcional -->
+    <hr class="footer-divider">
+  
+    <!-- Informações principais e caixinha de newsletter -->
+    <div class="footer-content">
+      <!-- Colunas de informações -->
+      <div class="footer-column">
+        <h4>Sobre</h4>
+        <ul>
+          <li><a href="#">Série Residência Médica</a></li>
+          <li><a href="#">Aprovados</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Produtos</h4>
+        <ul>
+          <li><a href="#">Residência Médica R1</a></li>
+          <li><a href="#">Residência Médica R+</a></li>
+          <li><a href="#">Revalida</a></li>
+          <li><a href="#">Soluções Institucionais</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Fale Conosco</h4>
+        <ul>
+          <li><a href="#">Central de Relacionamento</a></li>
+          <li><a href="#">Telefone e WhatsApp</a></li>
+          <li><a href="#">centraldoaluno@escola.com</a></li>
+          <li><a href="#">Ouvidoria</a></li>
+        </ul>
+      </div>
+  
+      <!-- Caixinha de newsletter -->
+      <div class="footer-newsletter">
+        <h4>Fique por dentro de todas as notícias</h4>
+        <p>Inscreva-se para receber novidades diretamente no seu e-mail</p>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Digite seu e-mail"
+            required
+          />
+          <button type="submit" class="newsletter-button">Enviar</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Linha de separação opcional -->
+    <hr class="footer-divider">
+  
+    <!-- Créditos no rodapé -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  
+  
+  
+  
+  
+  
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</html>
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./assets/js/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+
+</body>
+
+</html>

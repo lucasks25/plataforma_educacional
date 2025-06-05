@@ -1,0 +1,349 @@
+/* ===========================
+   Reset de Estilos e Configurações Globais
+   =========================== */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Fundo escuro para o corpo */
+    color: white;
+  }
+  
+  /* ===========================
+     Navbar - Barra de Navegação
+     =========================== */
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000; /* Navbar preta */
+    color: white;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px; /* Ajusta a altura do logo */
+    width: auto; /* Manter a proporção do logo */
+    max-width: 100%; /* Garante que o logo não ultrapasse o tamanho do contêiner */
+  }
+  
+  .navbar-center {
+    flex-grow: 1;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .navbar-menu li {
+    margin: 0 20px;
+  }
+  
+  .navbar-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .navbar-menu li a:hover {
+    color: #e0e0e0;
+  }
+  
+  /* Ícones e Menu de Perfil */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .cart-icon {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .cart-icon i {
+    font-size: 24px; /* Tamanho do ícone do carrinho */
+    color: white;
+  }
+  
+  .notification-icon {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .notification-icon i {
+    font-size: 24px; /* Tamanho do ícone de notificação (sino) */
+    color: white;
+  }
+  
+  .user-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .profile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 200px;
+  }
+  
+  .profile-menu ul {
+    list-style: none;
+  }
+  
+  .profile-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .profile-menu ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .profile-menu ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .profile-menu ul li a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .profile-menu.visible {
+    display: block;
+  }
+  
+  /* ===========================
+     Section de Boas-Vindas
+     =========================== */
+  
+  .welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    color: white;
+    height: 500px;
+    margin-left: 50px;
+  }
+  
+  .welcome-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .text-left {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 20px;
+  }
+  
+  .text-left h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .text-left p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #bbb;
+  }
+  
+  .image-right {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .welcome-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+  }
+
+
+  /* ===========================
+   Seção de Cursos
+   =========================== */
+
+.courses-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.section-title {
+  font-size: 3em;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 colunas */
+  gap: 30px;  /* Espaçamento entre os cards */
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+.course-card {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.course-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.course-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  color: #bbb;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.view-more-container {
+  margin-top: 20px;
+}
+
+.btn-ver-mais {
+  background-color: #ff5c5c;
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-mais:hover {
+  background-color: #ff1a1a;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .courses-container {
+    grid-template-columns: repeat(2, 1fr);  /* 2 colunas */
+  }
+  
+  .section-title {
+    font-size: 2em;
+  }
+  
+  .course-card {
+    width: 90%;
+  }
+}
+
+  
+  /* ===========================
+     Responsividade
+     =========================== */
+  
+  @media (max-width: 768px) {
+    .navbar-menu {
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background-color: #4CAF50;
+      padding: 15px;
+      display: none;
+    }
+  
+    .navbar-menu li a {
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .navbar-left, .navbar-right {
+      display: none;
+    }
+  
+    .navbar-menu.open {
+      display: flex;
+    }
+  
+    /* Ajustes na Section de Boas-Vindas para telas pequenas */
+    .welcome-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .text-left {
+      max-width: 100%;
+      padding-right: 0;
+      text-align: center;
+    }
+  
+    .image-right {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .welcome-img {
+      width: 80%;
+      max-width: 500px;
+    }
+  
+    /* Ajustes nos Cards para telas pequenas */
+    .dashboard {
+      gap: 20px;
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 90%;
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+  }
+  

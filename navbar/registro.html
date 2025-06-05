@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro e Login</title>
+  <link rel="stylesheet" href="./assets/css/registro.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/css/intlTelInput.css">
+  <!-- Link para o Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
+
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <!-- Botão de redirecionamento para a página index.html -->
+    <button class="back-button" onclick="window.location.href='index.html';">
+        <i class="fas fa-arrow-left"></i> <!-- Ícone da seta -->
+    </button>
+    <img src="./assets/images/logo.png" alt="Logo" class="logo">
+</div>
+
+
+
+  <!-- Principal Container -->
+  <div class="container">
+    <!-- Caixa de Registro -->
+    <div class="form-box">
+      <div class="circle-icon">
+        <i class="fas fa-id-card"></i>
+      </div>
+      <h2>Cadastre-se para criar sua conta e iniciar seus estudos!</h2>
+      <button class="social-button facebook">
+        <i class="fab fa-facebook-f"></i> Cadastrar com Facebook
+      </button>
+      <button class="social-button google">
+        <i class="fab fa-google"></i> Cadastrar com Google
+      </button>
+      
+      <form id="register-form" novalidate>
+        <input type="text" id="name" placeholder="Nome" required>
+        <div id="name-error" class="error-message"></div> <!-- Mensagem de erro para nome -->
+        
+        <input type="email" id="email" placeholder="E-mail" required>
+        <div id="email-error" class="error-message"></div> <!-- Mensagem de erro para e-mail -->
+        
+        <div class="iti">
+            <input id="phone" type="tel" placeholder="Digite seu telefone" />
+            <div id="phone-error" class="error-message"></div>
+          </div>
+          
+        
+        
+
+    
+        <div class="password-field">
+          <input type="password" id="password" placeholder="Senha cadastro" required>
+          <span class="show-password">Mostrar</span>
+        </div>
+        <div id="password-error" class="error-message"></div> <!-- Mensagem de erro para senha -->
+        
+        <ul class="password-requirements">
+            <li id="length-requirement">Mínimo de 6 caracteres</li>
+            <li id="letter-requirement">Mínimo de 1 letra</li>
+            <li id="number-requirement">Mínimo de 1 número</li>
+            <li id="special-char-requirement">Mínimo de 1 caractere especial (@, #, $, etc.)</li>
+          </ul>
+          
+          
+    
+        <div class="terms">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">
+            Ao cadastrar-se, você concorda com a nossa <a href="#">Política de Privacidade</a> e aceita receber comunicação da Salute Cursos Online.
+          </label>
+        </div>
+        <div id="terms-error" class="error-message"></div> <!-- Mensagem de erro para termos -->
+    
+        <button type="submit" class="submit-button">Cadastrar</button>
+      </form>
+    </div>
+
+    <!-- Caixa de Login -->
+    <div class="form-box">
+      <div class="circle-icon">
+        <i class="fas fa-sign-in-alt"></i>
+      </div>
+      <h2>Entre na sua conta para continuar seus estudos!</h2>
+      <button class="social-button facebook">
+        <i class="fab fa-facebook-f"></i> Entrar com Facebook
+      </button>
+      <button class="social-button google">
+        <i class="fab fa-google"></i> Entrar com Google
+      </button>
+    
+      <form id="login-form" novalidate>
+        <input type="email" id="email-login" placeholder="E-mail" required>
+        <div id="email-login-error" class="error-message"></div> <!-- Mensagem de erro para e-mail -->
+        
+        <div class="password-field">
+          <input type="password" id="password-login" placeholder="Senha" required>
+          <span class="show-password">Mostrar</span>
+        </div>
+        <div id="password-login-error" class="error-message"></div> <!-- Mensagem de erro para senha -->
+        
+        <button type="submit" class="submit-button">Entrar</button>
+      </form>
+      
+      <a href="#" class="forgot-password">Esqueceu a senha?</a>
+    </div>
+  </div>
+
+  <script src="./assets/js/registro.js"></script>
+</body>
+</html>

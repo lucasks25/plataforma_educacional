@@ -1,0 +1,488 @@
+
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #010c19, #000a14);
+    background-size: cover;
+    color: #f1f1f1;
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px 0;
+    text-align: center;
+    top: 0;
+    z-index: 10;
+    margin-bottom: 50px;
+}
+
+/* Estilo do botão de voltar */
+.back-button {
+    position: absolute; /* Posiciona o botão no canto superior esquerdo */
+    left: 60px;  /* Distância da borda esquerda */
+    top: 10%; /* Posiciona verticalmente no meio da navbar */
+    background: none; /* Sem fundo */
+    border: none; /* Sem borda */
+    color: #ffffff; /* Cor do ícone */
+    font-size: 32px; /* Tamanho do ícone */
+    cursor: pointer;
+    border-radius: 5px; /* Borda arredondada */
+    padding: 5px; /* Um pouco de espaço ao redor do ícone */
+}
+
+/* Remove o foco ou qualquer efeito de hover do botão */
+.back-button:focus,
+.back-button:hover {
+    outline: none; /* Remove a borda de foco */
+    box-shadow: none; /* Remove qualquer sombra */
+    background: none; /* Garante que o fundo não mude */
+}
+
+.navbar .logo {
+    margin-top: 20px;
+    height: 40px; /* Aumente este valor conforme necessário */
+    width: auto;
+}
+
+/* Contêiner Principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* Formulários (Caixas) */
+.form-box {
+    width: 360px;
+    background-color: #1a2535; /* Fundo escuro para o formulário */
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Círculo no Topo */
+.circle-icon {
+    position: absolute;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border: 2px solid #4a90e2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.circle-icon i {
+    font-size: 1.5rem;
+    color: #4a90e2;
+}
+
+/* Título */
+.form-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #f1f1f1;
+    margin-top: 40px;
+}
+
+/* Botões sociais */
+.social-button {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 0; /* Sem borda arredondada */
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.social-button .fab {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.social-button.facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+.social-button.google {
+    background-color: #4285F4;
+    color: white;
+    border: 1px solid #ddd;
+}
+
+.password-requirements li {
+    color: red; /* Cor padrão para requisitos não atendidos */
+  }
+  
+  .password-requirements li.valid {
+    color: green; /* Cor para requisitos atendidos */
+  }
+  
+
+/* Campos do formulário */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a2535;
+    border-radius: 0;
+}
+
+/* Ajustes para os campos de entrada */
+form input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #333;
+    border-radius: 0;
+    font-size: 1rem;
+    background-color: #2a3c53;
+    color: #f1f1f1;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Estilo do campo ao focar */
+form input:focus:invalid {
+    background-color: #f8d7da; /* Manter o fundo suave quando estiver em foco */
+    border-color: #dc3545; /* Borda vermelha ao focar */
+    outline: none; /* Remover o contorno do foco */
+}
+
+/* Estilo para a caixa de input quando estiver válida */
+form input:valid {
+    border-color: #4a90e2; /* Cor azul quando a caixa for válida */
+    background-color: #354b66; /* Fundo mais escuro quando válido */
+}
+
+/* Estilo do placeholder */
+form input::placeholder {
+    color: #aaa;
+    opacity: 0.8;
+}
+
+/* Requisitos de Senha */
+.password-requirements {
+    font-size: 0.9rem;
+    text-align: left;
+    margin: 12px 0;
+    color: #ccc;
+    padding-left: 40px;
+    width: 100%;
+}
+
+/* Botão de enviar */
+.submit-button {
+    width: 100%;
+    padding: 14px 16px;
+    margin-top: 20px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: #1351b4;
+}
+
+/* Ajuste de espaçamento e alinhamento */
+form input,
+.submit-button {
+    margin-bottom: 15px;
+}
+
+/* Termos e Política */
+.terms {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #aaa;
+    justify-content: flex-start; /* Alinha todos os itens à esquerda */
+    margin-left: -70px;
+}
+
+
+.terms label {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-left: -65px; /* Remove qualquer margem à esquerda */
+}
+
+.terms a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Caixa de "Mostrar" Senha */
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+/* Mostrar senha (estilo do ícone) */
+.show-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #4a90e2;
+    font-size: 0.9rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Mostrar senha ao passar o mouse */
+.show-password:hover {
+    color: #357ae8;
+}
+
+/* Link de senha esquecida */
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Estilo da checkbox */
+.terms input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Estilo da checkbox quando está desmarcada */
+.terms input[type="checkbox"]:not(:checked) {
+    background-color: #f8d7da; /* Fundo suave, tom mais claro de vermelho */
+    border-color: #dc3545; /* Borda vermelha */
+    color: #333; /* Cor do texto em cinza escuro para melhorar a legibilidade */
+}
+
+/* Estilo da checkbox quando marcada */
+.terms input[type="checkbox"]:checked {
+    background-color: #4a90e2; /* Cor azul quando marcada */
+    border-color: #4a90e2; /* Cor azul na borda */
+}
+
+/* Estilo para campos inválidos */
+input.invalid {
+    border: 2px solid red;
+}
+
+/* Estilo para mensagens de erro */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: none; /* Inicialmente oculta */
+    margin-top: 5px; /* Distância entre o campo e a mensagem */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+/* Estilo para os campos inválidos (bordas vermelhas) */
+.invalid {
+    border: 2px solid red;
+}
+
+
+/* Feedback da senha */
+.password-requirements span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.password-requirements span.valid {
+    background-color: #28a745;
+}
+
+.password-requirements span.invalid {
+    background-color: #dc3545;
+}
+
+#login-form input,
+#register-form input {
+    width: 100% !important; /* Forçar a largura a ser 100% */
+    padding: 14px !important;
+    margin: 12px 0 !important;
+    border: 1px solid #333 !important;
+    border-radius: 4px !important;
+    font-size: 1rem !important;
+    background-color: #2a3c53 !important;
+    color: #f1f1f1 !important;
+    transition: all 0.3s ease-in-out !important;
+    box-sizing: border-box !important;
+}
+
+
+#login-form, #register-form {
+    margin: 0;  /* Se necessário */
+    padding: 0;
+}
+
+.form-field {
+    margin-bottom: 12px; /* Adicionando espaçamento consistente entre os campos */
+}
+
+
+/* Estilo do campo ao focar no login */
+#login-form input:focus {
+    border-color: #4a90e2;
+    outline: none;
+    background-color: #354b66;
+}
+
+/* Estilo do campo ao focar no registro */
+#register-form input:focus {
+    border-color: #4a90e2;
+    outline: none;
+    background-color: #354b66;
+}
+
+/* Estilo para os campos inválidos após o envio do login */
+#login-form input.invalid {
+    border: 2px solid red;
+}
+
+/* Estilo para os campos inválidos após o envio do registro */
+#register-form input.invalid {
+    border: 2px solid red;
+}
+
+/* Mensagem de erro para o login */
+#login-form input.invalid + .error-message {
+    display: block;
+}
+
+/* Mensagem de erro para o registro */
+#register-form input.invalid + .error-message {
+    display: block;
+}
+
+/* Exibição de erro apenas quando o campo for inválido */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-align: left;
+    display: none; /* Inicialmente invisível */
+}
+
+/* Ajuste do input para garantir que ele ocupe toda a largura do contêiner */
+#phone {
+    width: 100%; /* Faz com que o campo de telefone ocupe toda a largura do contêiner */
+    padding: 12px 16px; /* Ajuste do padding para garantir que o campo de telefone tenha o tamanho adequado */
+    font-size: 15px; /* Ajuste do tamanho da fonte */
+    height: 45px; /* Ajuste da altura do campo */
+    border: 1px solid #ccc; /* Borda do campo */
+    border-radius: 4px; /* Bordas arredondas */
+    box-sizing: border-box; /* Garante que o padding e a borda não aumentem a largura total */
+    position: relative; /* Necessário para que o input não sobreponha o código */
+    z-index: 0; /* Coloca o input atrás da bandeira e código */
+}
+
+/* Ajuste do contêiner da div */
+.iti {
+    transform: translate(20px, 0px);
+    width: 88%; /* Ajusta a largura do contêiner */
+    max-width: 400px; /* Largura máxima para o contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Ajuste do contêiner da bandeira */
+.iti__flag-container {
+    transform: translate(-80px, 10px); /* Move a bandeira 10px para a esquerda e 5px para baixo */
+    width: 80px; /* Tamanho ajustado para a bandeira */
+    height: 50px; /* Tamanho ajustado para a bandeira */
+    margin-right: 10px; /* Espaço entre a bandeira e o campo de telefone */
+    display: flex; /* Flexbox para manter a bandeira alinhada */
+    justify-content: center; /* Centraliza a bandeira dentro do container */
+    align-items: center; /* Alinha verticalmente a bandeira */
+    position: relative; /* Para garantir que o z-index tenha efeito */
+    z-index: 2; /* Coloca a bandeira acima do campo de telefone */
+}
+
+/* Ajuste do código do país (DDD) */
+.iti__dial-code {
+    font-size: 16px; /* Ajuste no tamanho da fonte do DDD */
+    margin-right: 8px; /* Espaço entre o código DDD e o campo de telefone */
+    z-index: 2;
+}
+
+/* Ajustes adicionais do input de telefone */
+.intl-tel-input {
+    width: 100%; /* Garante que o container tenha 100% da largura */
+}
+
+/* Input de telefone dentro do intl-tel-input */
+.intl-tel-input input[type="tel"] {
+    width: 100%; /* O input interno herda a largura corretamente */
+    padding-left: 50px; /* Espaço à esquerda para a bandeira e o código do país */
+    font-size: 16px; /* Tamanho de fonte consistente */
+}
+
+/* Ajuste do ícone da bandeira */
+.intl-tel-input .selected-flag {
+    width: 20px; /* Ajuste do tamanho da bandeira */
+    height: 15px; /* Tamanho proporcional da bandeira */
+    object-fit: contain; /* Garante que a bandeira se ajuste sem distorção */
+}
