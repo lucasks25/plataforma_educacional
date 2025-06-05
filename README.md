@@ -1,1 +1,1 @@
-# plataforma_educacional
+Plataforma feita para aprendizado. 
